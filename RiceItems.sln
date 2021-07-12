@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiceItems", "RiceItems\RiceItems.csproj", "{EA750A6A-F762-457F-8E43-2C45E9196FD0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA750A6A-F762-457F-8E43-2C45E9196FD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA750A6A-F762-457F-8E43-2C45E9196FD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA750A6A-F762-457F-8E43-2C45E9196FD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA750A6A-F762-457F-8E43-2C45E9196FD0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5411C308-A0FC-487E-BA99-4B8369D8BD98}
+	EndGlobalSection
+EndGlobal
