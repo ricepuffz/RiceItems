@@ -15,9 +15,9 @@ namespace RiceItemsTests
             
             Item item = new Item(itemName, itemDisplayName, itemDescription);
 
-            Assert.AreEqual(itemName, item.Name);
-            Assert.AreEqual(itemDisplayName, item.DisplayName);
-            Assert.AreEqual(itemDescription, item.Description);
+            Assert.AreEqual(itemName, item.Name, "Item.Name and supplied name must be equal");
+            Assert.AreEqual(itemDisplayName, item.DisplayName, "Item.Display and supplied displayName must be equal");
+            Assert.AreEqual(itemDescription, item.Description, "Item.Description and supplied description must be equal");
         }
     }
 }
