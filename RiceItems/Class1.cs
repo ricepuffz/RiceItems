@@ -2,7 +2,9 @@
 
 namespace RiceItems
 {
-    public class Class1
+    public class Item
     {
+        string Name { get; set; }
+        string Description { get; set; }
     }
 }
