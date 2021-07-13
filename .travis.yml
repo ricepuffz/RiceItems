@@ -5,6 +5,6 @@ solution: RiceItems.sln
 script:
   - dotnet restore
   - dotnet test
-  - cd %HOME%/.nuget/packages
+  - cd $HOME/.nuget/packages
   - ls
-  - cd %HOME%
+  - cd $HOME
