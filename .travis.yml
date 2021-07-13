@@ -1,11 +1,8 @@
 language: csharp
-mono: none
 dotnet: 3.1.410
 solution: RiceItems.sln
 script:
   - dotnet restore
   - dotnet test
-  - mono
-  - sudo apt-get install mono-devel
   - mono $HOME/.nuget/packages/opencover/4.7.1221/tools/OpenCover.Console.exe -register:user -targetargs:test -filter:"+[RiceItems*]*" -output:".\RiceItems_coverage.xml" -oldstyle
   - mono $HOME/.nuget/packages/coveralls.io/1.4.2/tools/coveralls.net.exe --opencover RiceItems_coverage.xml -r %COVERALLS_REPO_TOKEN%
