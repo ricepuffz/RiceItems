@@ -5,6 +5,7 @@ solution: RiceItems.sln
 script:
   - dotnet restore
   - dotnet test
-  - cd $HOME/.nuget/packages
-  - ls
-  - cd $HOME
+  - wine
+  - sudo apt-get install wine
+  - wine $HOME/.nuget/packages/opencover/4.7.1221/tools/OpenCover.Console.exe -register:user -target:"usr/share/dotnet" -targetargs:test -filter:"+[RiceItemsTests*]*" -output:".\RiceItems_coverage.xml" -oldstyle
+  - wine $HOME/.nuget/packages/coveralls/1.4.2/tools/coveralls.net.exe --opencover RiceItems_coverage.xml -r %COVERALLS_REPO_TOKEN%
