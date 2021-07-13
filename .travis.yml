@@ -6,9 +6,11 @@ script:
   - dotnet restore
   - dotnet test
   - sudo apt install nuget
-  - sudo apt install mono-devel
-  - mozroots --import --sync
-  - nuget install OpenCover -OutputDirectory opencover
-  - nuget install coveralls.io
-  - opencover\tools\OpenCover.Console.exe -register:user -target:"C:/Program Files/dotnet/dotnet.exe" -targetargs:test -filter:"+[RiceItemsTests*]*" -output:".\RiceItems_coverage.xml" -oldstyle
-  - coveralls\1.4.2\tools\coveralls.net.exe --opencover RiceItems_coverage.xml -r %COVERALLS_REPO_TOKEN%
+  - nuget restore RiceItems.sln -Verbosity detailed
+  - nuget update RiceItems.sln -Verbosity detailed
+  - echo "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+  - cd packages
+  - ls
+  - cd ..
+  - packages\opencover\tools\OpenCover.Console.exe -register:user -target:"C:/Program Files/dotnet/dotnet.exe" -targetargs:test -filter:"+[RiceItemsTests*]*" -output:".\RiceItems_coverage.xml" -oldstyle
+  - packages\coveralls\1.4.2\tools\coveralls.net.exe --opencover RiceItems_coverage.xml -r %COVERALLS_REPO_TOKEN%
