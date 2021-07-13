@@ -6,6 +6,7 @@ script:
   - dotnet restore
   - dotnet test
   - sudo apt install nuget
+  - mozroots --import --sync
   - nuget install OpenCover -OutputDirectory opencover
   - nuget install coveralls.io
   - opencover\tools\OpenCover.Console.exe -register:user -target:"C:/Program Files/dotnet/dotnet.exe" -targetargs:test -filter:"+[RiceItemsTests*]*" -output:".\RiceItems_coverage.xml" -oldstyle
