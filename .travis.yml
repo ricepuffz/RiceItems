@@ -6,6 +6,7 @@ script:
   - dotnet restore
   - dotnet test
   - sudo apt install nuget
+  - sudo apt install mono-devel
   - mozroots --import --sync
   - nuget install OpenCover -OutputDirectory opencover
   - nuget install coveralls.io
