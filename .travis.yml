@@ -6,4 +6,4 @@ script:
   - cd /usr/share/
   - ls
   - cd dotnet/
-  ls
+  - ls
